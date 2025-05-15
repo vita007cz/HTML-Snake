@@ -96,7 +96,7 @@ Tlačítka pro výběr obtížnosti jsou připravena (`easyDiffBtn`, `mediumDiff
 
 ## Jak spustit
 
-1. Nakopíruj soubor do `.html` souboru.
+1. Stáhni si `.html` soubor.
 2. Otevři ho v libovolném webovém prohlížeči.
 
 ## Licence
