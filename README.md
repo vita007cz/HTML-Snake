@@ -1,24 +1,20 @@
-# HTML-Snake
-Projekt do školy 
-# 🐍 Snake Game in HTML5 Canvas
+# Snake v HTML5
 
-Jednoduchá implementace klasické hry **Snake** v JavaScriptu, vykreslená pomocí `<canvas>`. Uživatel může hru ovládat pomocí klávesnice a resetovat ji pomocí tlačítka. Volba obtížnosti je připravena, ale zatím není implementována.
+Jednoduchá implementace klasické hry Snake v JavaScriptu, vykreslená pomocí `<canvas>`. Uživatel může hru ovládat pomocí klávesnice a resetovat ji pomocí tlačítka. Volba obtížnosti je připravena, ale zatím není implementována.
 
-## 🔗 Demo
+## Demo
 
-> (Zde můžeš přidat odkaz na GitHub Pages nebo jiné online demo, pokud ho vytvoříš.)
+(Zde můžeš přidat odkaz na GitHub Pages nebo jiné online demo, pokud ho vytvoříš.)
 
-## 📁 Obsah
+## Obsah
 
-- `HTML` pro strukturu stránky
-- `CSS` pro vzhled hry
-- `JavaScript` pro logiku hry (kreslení, ovládání, skóre, kolize atd.)
+- HTML pro strukturu stránky
+- CSS pro vzhled hry
+- JavaScript pro logiku hry (kreslení, ovládání, skóre, kolize atd.)
 
----
+## Vysvětlení kódu
 
-## 🧠 Vysvětlení kódu
-
-### 🧱 HTML Struktura
+### HTML Struktura
 ```html
 <div id="gameContainer">
     <canvas id="gameBoard" width="500" height="500"></canvas>
@@ -30,13 +26,11 @@ Jednoduchá implementace klasické hry **Snake** v JavaScriptu, vykreslená pomo
     <button id="hardDiffBtn">Hard</button>
 </div>
 ```
-- **`<canvas>`**: Vykreslovací plocha pro hru.
-- **`<div id="scoreText">`**: Zobrazuje skóre.
-- **`<button>`**: Ovládací tlačítka (reset a výběr obtížnosti).
+- `<canvas>`: Vykreslovací plocha pro hru.
+- `<div id="scoreText">`: Zobrazuje skóre.
+- `<button>`: Ovládací tlačítka (reset a výběr obtížnosti).
 
----
-
-### 🎨 CSS Styly
+### CSS Styly
 ```css
 #gameBoard { border: 3px solid; }
 #scoreText { font-size: 100px; }
@@ -44,25 +38,19 @@ Jednoduchá implementace klasické hry **Snake** v JavaScriptu, vykreslená pomo
 ```
 - Stylizace herního pole, textu skóre a tlačítek.
 
----
+### JavaScript – Logika hry
 
-### 🕹️ JavaScript – Logika hry
-
-#### 🔄 Inicializace a proměnné
+#### Inicializace a proměnné
 ```js
 const gameBoard = document.querySelector("#gameBoard");
 const ctx = gameBoard.getContext("2d");
 // ... ostatní proměnné pro barvy, velikosti, stav hry ...
 ```
 
----
-
-#### ▶️ `gameStart()`
+#### `gameStart()`
 Spouští hru: nastaví `running = true`, vytvoří jídlo, vykreslí ho a spustí herní smyčku pomocí `nextTick()`.
 
----
-
-#### ⏲️ `nextTick()`
+#### `nextTick()`
 ```js
 setTimeout(() => {
     clearBoard();
@@ -75,68 +63,46 @@ setTimeout(() => {
 ```
 - Hlavní smyčka hry – každých 50 ms vykoná všechny kroky hry.
 
----
-
-#### 🧼 `clearBoard()`
+#### `clearBoard()`
 Vymaže celé herní pole (canvas) před novým vykreslením.
 
----
-
-#### 🍎 `createFood()` a `drawFood()`
+#### `createFood()` a `drawFood()`
 Náhodně vygeneruje nové souřadnice jídla a vykreslí ho červeným čtvercem.
 
----
+#### `moveSnake()` a `drawSnake()`
+- `moveSnake()`: Přidá nový "head" dle směru pohybu a odstraní poslední segment, pokud nezískal jídlo.
+- `drawSnake()`: Vykresluje hada po částech.
 
-#### 🐍 `moveSnake()` a `drawSnake()`
-- **`moveSnake()`**: Přidá nový "head" dle směru pohybu a odstraní poslední segment, pokud nezískal jídlo.
-- **`drawSnake()`**: Vykresluje hada po částech.
-
----
-
-#### 🎮 `changeDirection(event)`
+#### `changeDirection(event)`
 Změní směr hada podle stisknuté šipky, pokud nejde zpět do protisměru.
 
----
-
-#### 💥 `checkGameOver()`
+#### `checkGameOver()`
 Kontroluje kolize:
 - S okrajem canvasu
 - Sám se sebou (když had narazí do vlastního těla)
 
----
-
-#### ☠️ `displayGameOver()`
+#### `displayGameOver()`
 Vypíše na canvas nápis "GAME OVER!" a zastaví hru.
 
----
-
-#### 🔁 `resetGame()`
+#### `resetGame()`
 Obnoví výchozí stav hry, resetuje skóre a pozici hada, a znovu spustí hru.
 
----
-
-## 🔧 Funkce obtížnosti
+## Funkce obtížnosti
 
 Tlačítka pro výběr obtížnosti jsou připravena (`easyDiffBtn`, `mediumDiffBtn`, `hardDiffBtn`), ale nejsou zatím propojena s logikou hry. Doporučený způsob je měnit rychlost (`setTimeout` delay).
 
----
-
-## 🧪 Možnosti vylepšení
+## Možnosti vylepšení
 
 - Přidání logiky pro obtížnosti
 - Zvuky při sežrání jídla nebo kolizi
 - Lokální ukládání nejvyššího skóre
 - Responsivní canvas pro mobilní zařízení
 
----
-
-## ▶️ Jak spustit
+## Jak spustit
 
 1. Nakopíruj soubor do `.html` souboru.
 2. Otevři ho v libovolném webovém prohlížeči.
 
----
+## Licence
 
-## 📄 Licence
-
-Tento projekt je k dispozici pod licencí [MIT](LICENSE), což znamená, že si s ním můžeš dělat, co chceš — hlavně se u toho bav!
+Tento projekt je k dispozici pod licencí MIT, což znamená, že si s ním můžeš dělat, co chceš — hlavně se u toho bav.
