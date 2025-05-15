@@ -2,10 +2,6 @@
 
 Jednoduchá implementace klasické hry Snake v JavaScriptu, vykreslená pomocí `<canvas>`. Uživatel může hru ovládat pomocí klávesnice a resetovat ji pomocí tlačítka. Volba obtížnosti je připravena, ale zatím není implementována.
 
-## Demo
-
-(Zde můžeš přidat odkaz na GitHub Pages nebo jiné online demo, pokud ho vytvoříš.)
-
 ## Obsah
 
 - HTML pro strukturu stránky
