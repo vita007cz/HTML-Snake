@@ -85,7 +85,7 @@ Obnoví výchozí stav hry, resetuje skóre a pozici hada, a znovu spustí hru.
 
 ## Funkce obtížnosti
 
-Tlačítka pro výběr obtížnosti jsou připravena (`easyDiffBtn`, `mediumDiffBtn`, `hardDiffBtn`), ale nejsou zatím propojena s logikou hry. Doporučený způsob je měnit rychlost (`setTimeout` delay).
+Tlačítka pro výběr obtížnosti jsou připravena (`easyDiffBtn`, `mediumDiffBtn`, `hardDiffBtn`), ale nejsou zatím propojena s logikou hry. Zatím měním rychlost pomocí (`setTimeout` delay).
 
 ## Možnosti vylepšení
 
