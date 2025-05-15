@@ -99,6 +99,10 @@ Tlačítka pro výběr obtížnosti jsou připravena (`easyDiffBtn`, `mediumDiff
 1. Stáhni si `.html` soubor.
 2. Otevři ho v libovolném webovém prohlížeči.
 
+
+## Poděkování
+- Chtěl bych poděkovat Matějovi Vítovi za velkou pomoc s kodem, bez něho bych to celé sám neudělal.
+
 ## Licence
 
 Tento projekt je k dispozici pod licencí MIT, což znamená, že si s ním můžeš dělat, co chceš — hlavně se u toho bav.
